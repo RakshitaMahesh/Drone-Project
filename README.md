@@ -18,6 +18,13 @@
 
 An interactive web-based prototype demonstrating a drone border surveillance dashboard with simulated monitoring, event alerts, risk assessment, and movement analytics.
 
+## Project Objectives
+
+- Demonstrate a browser-based surveillance dashboard.
+- Visualize simulated monitoring events and risk levels.
+- Display event details, graphs, and recent alerts.
+- Provide an interactive interface for exploring simulated surveillance data.
+
 ## Live Demo
 
 https://rakshitamahesh.github.io/Drone-Project/
@@ -33,6 +40,14 @@ https://rakshitamahesh.github.io/Drone-Project/
 - Recent alert history
 - CSV export of simulated event logs
 - Responsive dark-themed user interface
+
+## Workflow
+
+1. Start the simulated monitoring session.
+2. Generate and select simulated events.
+3. View event details and illustrative risk scores.
+4. Observe the schematic map and graphs.
+5. Review recent alerts and export simulated logs as CSV.
 
 ## Technologies Used
 
@@ -56,6 +71,19 @@ This project demonstrates the design of a browser-based surveillance dashboard a
 ## Important Disclaimer
 
 This prototype uses generated demonstration data. It is not connected to a real drone, GPS device, camera, sensor, or operational surveillance system.
+
+## Limitations
+
+- The project uses simulated data.
+- It is not connected to a real drone, GPS, camera, or physical sensors.
+- Risk scores are illustrative and are not validated threat assessments.
+
+## Future Enhancements
+
+- Integrate authorized live telemetry from compatible devices.
+- Add backend storage for event history.
+- Add authentication and user access controls.
+- Improve analytics and reporting features.
 
 ## Author
 
