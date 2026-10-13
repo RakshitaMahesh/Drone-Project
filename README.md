@@ -1,90 +1,92 @@
-# Drone-
-# Drone Border Surveillance System (DBSS)
+# 🚁 Drone Border Surveillance System (DBSS)
+
+An interactive web-based dashboard prototype that demonstrates simulated drone surveillance, event monitoring, risk analysis, and alert management through a responsive user interface.
+
+## 🌐 Live Demo
+
+[**View Live Project**](https://rakshitamahesh.github.io/Drone-Project/)
+
+## 📌 Project Overview
+
+The Drone Border Surveillance System is designed to demonstrate how surveillance-related information can be displayed and organized through an interactive dashboard. It provides monitoring controls, simulated events, visual risk indicators, map-based markers, and an alert history.
+
+This project focuses on frontend development, interactive user interfaces, and data visualization.
+
+## ✨ Key Features
+
+- **Interactive Dashboard** — View surveillance-related information in one place.
+- **Monitoring Controls** — Interact with the dashboard controls.
+- **Simulated Event Detection** — Generate and display sample surveillance events.
+- **Risk Analysis** — Visualize simulated risk information.
+- **Surveillance Map** — Display illustrative map markers.
+- **Recent Alerts** — View the history of simulated events.
+- **Data Export** — Export simulated event logs as CSV.
+- **Responsive Design** — Use the dashboard across different screen sizes.
+
+## 🖥️ Screenshots
 
 ### 1. Main Dashboard
 ![Drone Dashboard](drone-dashboard.png)
 
-### 2. Monitoring Controls and Event Details
+### 2. Monitoring Controls
 ![Monitoring Controls](monitoring-controls.png)
 
 ### 3. Surveillance Map
 ![Surveillance Map](Surveillance%20Map.png)
 
-### 4. Risk Analysis and Graph
+### 4. Risk Analysis
 ![Risk Analysis](risk-analysis.png)
 
 ### 5. Recent Alerts
 ![Recent Alerts](recent-alerts.png)
 
-An interactive web-based prototype demonstrating a drone border surveillance dashboard with simulated monitoring, event alerts, risk assessment, and movement analytics.
-
-## Project Objectives
-
-- Demonstrate a browser-based surveillance dashboard.
-- Visualize simulated monitoring events and risk levels.
-- Display event details, graphs, and recent alerts.
-- Provide an interactive interface for exploring simulated surveillance data.
-
-## Live Demo
-
-https://rakshitamahesh.github.io/Drone-Project/
-
-## Features
-
-- Interactive monitoring dashboard
-- Start, stop, and reset controls
-- Simulated event generation and selection
-- Dynamic movement and risk graph
-- Risk score and event details
-- Schematic surveillance map with moving markers
-- Recent alert history
-- CSV export of simulated event logs
-- Responsive dark-themed user interface
-
-## Workflow
-
-1. Start the simulated monitoring session.
-2. Generate and select simulated events.
-3. View event details and illustrative risk scores.
-4. Observe the schematic map and graphs.
-5. Review recent alerts and export simulated logs as CSV.
-
-## Technologies Used
+## 🛠️ Technologies Used
 
 - HTML5
 - CSS3
 - JavaScript
-- HTML Canvas API
+- Canvas API
 - GitHub Pages
 
-## How to Run Locally
+## ⚙️ How to Run Locally
 
-1. Clone or download this repository.
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/RakshitaMahesh/Drone-Project.git
+   ```
+
 2. Open the project folder.
-3. Open `index.html` in a browser, or use the Live Server extension in Visual Studio Code.
-4. Click **Start Monitoring** to run the demonstration.
+3. Open `index.html` in your browser.
 
-## Project Purpose
+No additional installation is required for the basic frontend prototype.
 
-This project demonstrates the design of a browser-based surveillance dashboard and the visualization of simulated monitoring events. It is intended for educational and demonstration purposes.
+## 🎯 Project Objectives
 
-## Important Disclaimer
+- Develop an interactive surveillance dashboard interface.
+- Demonstrate simulated event monitoring and risk visualization.
+- Organize alerts and event logs in a user-friendly format.
+- Apply frontend development skills to a practical prototype.
 
-This prototype uses generated demonstration data. It is not connected to a real drone, GPS device, camera, sensor, or operational surveillance system.
+## 🔮 Future Enhancements
 
-## Limitations
+- Integrate authorized live sensor or drone data.
+- Add secure user authentication and role-based access.
+- Develop backend storage for event history.
+- Improve map visualization and analytics.
+- Explore AI-based event classification using suitable datasets.
 
-- The project uses simulated data.
-- It is not connected to a real drone, GPS, camera, or physical sensors.
-- Risk scores are illustrative and are not validated threat assessments.
+## ⚠️ Limitations and Disclaimer
 
-## Future Enhancements
+This project is an educational frontend prototype that uses simulated data. It is not connected to real drones, cameras, GPS devices, or physical sensors. The displayed events and risk indicators are illustrative and should not be used for real-world surveillance or security decisions.
 
-- Integrate authorized live telemetry from compatible devices.
-- Add backend storage for event history.
-- Add authentication and user access controls.
-- Improve analytics and reporting features.
+## 👩‍💻 Author
 
-## Author
+**Rakshita Mahesh**
 
-Rakshita Mahesh
+[GitHub Repository](https://github.com/RakshitaMahesh/Drone-Project) | [Live Demo](https://rakshitamahesh.github.io/Drone-Project/)
+
+---
+
+
+
