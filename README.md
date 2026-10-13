@@ -8,7 +8,7 @@
 ![Monitoring Controls](monitoring-controls.png)
 
 ### 3. Surveillance Map
-![Surveillance Map](surveillance-map.png)
+![Surveillance Map](Surveillance%20Map.png)
 
 ### 4. Risk Analysis and Graph
 ![Risk Analysis](risk-analysis.png)
