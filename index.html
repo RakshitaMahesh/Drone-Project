@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive drone border surveillance simulation dashboard." />
   <title>Drone Border Surveillance System</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,32 +17,78 @@
 
   <header class="hero container">
     <nav class="topbar">
-      <div class="brand">DBSS</div>
-      <button class="status-pill" aria-label="System status">● Live Monitoring</button>
+      <div class="brand">DBSS <span>●</span></div>
+      <div class="status-pill" id="system-status">● Simulation Ready</div>
     </nav>
 
     <div class="hero-content card">
       <p class="eyebrow">Advanced Perimeter Intelligence</p>
       <h1>Drone Border Surveillance System</h1>
       <p class="tagline">
-        Real-time aerial monitoring, intruder detection, and precise location analytics for secure and responsive border operations.
+        An interactive demonstration of aerial monitoring, simulated intrusion alerts,
+        movement tracking and risk analytics.
       </p>
-      <a href="#dashboard" class="cta-button">Get Started</a>
+      <a href="#dashboard" class="cta-button">Open Dashboard ↗</a>
+      <p class="demo-note">DEMO MODE · All events and coordinates are simulated.</p>
     </div>
   </header>
 
   <main class="container" id="dashboard">
-    <section class="grid-layout">
-      <article class="card panel">
-        <h2>Intruder Event Selection</h2>
-        <p class="muted">Select an intruder event to view timeline, threat graph, exact border location, and current tracked position.</p>
 
-        <label for="intruder-select">Choose Intruder Event</label>
-        <select id="intruder-select" aria-label="Choose intruder event"></select>
+    <section class="stats-grid" aria-label="System statistics">
+      <article class="card stat-card">
+        <p class="stat-label">Monitoring Status</p>
+        <h2 id="monitoring-value">STANDBY</h2>
+        <p class="stat-foot" id="monitoring-foot">Awaiting activation</p>
+      </article>
+
+      <article class="card stat-card">
+        <p class="stat-label">Events Detected</p>
+        <h2 id="events-count">0</h2>
+        <p class="stat-foot">During this session</p>
+      </article>
+
+      <article class="card stat-card">
+        <p class="stat-label">Current Risk</p>
+        <h2 id="risk-value">LOW</h2>
+        <p class="stat-foot" id="risk-foot">No active simulated alert</p>
+      </article>
+
+      <article class="card stat-card">
+        <p class="stat-label">Simulation Uptime</p>
+        <h2 id="uptime-value">00:00</h2>
+        <p class="stat-foot">Current session</p>
+      </article>
+    </section>
+
+    <section class="grid-layout">
+
+      <article class="card panel">
+        <p class="eyebrow">CONTROL CENTER</p>
+        <h2>Monitoring Controls</h2>
+        <p class="muted">Start or pause the simulated surveillance session.</p>
+
+        <div class="control-buttons">
+          <button type="button" class="cta-button" id="start-monitoring">▶ Start Monitoring</button>
+          <button type="button" class="secondary-button" id="stop-monitoring" disabled>■ Stop Monitoring</button>
+          <button type="button" class="secondary-button" id="reset-monitoring">↻ Reset Demo</button>
+        </div>
+
+        <div class="status-row">
+          <span class="status-dot" id="status-dot"></span>
+          <span id="monitoring-message">Simulation is ready to start.</span>
+        </div>
+
+        <label for="intruder-select">Select a simulated event</label>
+        <select id="intruder-select">
+          <option value="">Waiting for monitoring...</option>
+        </select>
       </article>
 
       <article class="card panel">
+        <p class="eyebrow">EVENT INTELLIGENCE</p>
         <h2>Event Details</h2>
+
         <div class="details-grid">
           <div>
             <p class="label">Detected Time</p>
@@ -51,26 +99,99 @@
             <p id="border-zone" class="value">--</p>
           </div>
           <div>
-            <p class="label">Exact Intrusion Location</p>
+            <p class="label">Simulated Location</p>
             <p id="exact-location" class="value">--</p>
           </div>
           <div>
-            <p class="label">Current Tracked Location</p>
+            <p class="label">Tracked Position</p>
             <p id="current-location" class="value">--</p>
           </div>
+        </div>
+
+        <div class="risk-panel">
+          <div class="risk-heading">
+            <span>Risk Assessment</span>
+            <strong id="risk-score">0/100</strong>
+          </div>
+          <div class="risk-track">
+            <div id="risk-bar" class="risk-fill"></div>
+          </div>
+          <p class="muted" id="risk-description">Start the simulation to generate sample readings.</p>
         </div>
       </article>
 
       <article class="card panel full-width">
         <div class="panel-header">
-          <h2>Intruder Movement & Risk Graph</h2>
-          <p class="muted" id="graph-caption">Loading graph...</p>
+          <div>
+            <p class="eyebrow">LIVE ANALYTICS</p>
+            <h2>Movement & Risk Graph</h2>
+          </div>
+          <span class="chart-badge">SIMULATED DATA</span>
         </div>
+
+        <p class="muted" id="graph-caption">The graph will update when monitoring starts.</p>
+
         <div class="chart-wrap">
-          <canvas id="movement-chart" width="960" height="320" aria-label="Intruder movement graph"></canvas>
+          <canvas id="movement-chart" width="960" height="320"
+            role="img" aria-label="Simulated movement and risk graph">
+            Your browser does not support canvas.
+          </canvas>
         </div>
       </article>
+
+      <article class="card panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">PERIMETER OVERVIEW</p>
+            <h2>Surveillance Map</h2>
+          </div>
+          <span class="chart-badge">ILLUSTRATIVE</span>
+        </div>
+
+        <p class="muted">A schematic view of a fictional monitoring zone, not a real geographic map.</p>
+
+        <div class="surveillance-map" id="surveillance-map">
+          <div class="map-grid"></div>
+          <div class="map-boundary"></div>
+          <span class="map-zone zone-a">ZONE A</span>
+          <span class="map-zone zone-b">ZONE B</span>
+          <span class="map-zone zone-c">ZONE C</span>
+          <div class="drone-marker" id="drone-marker" aria-label="Simulated drone position">✦</div>
+          <div class="intruder-marker" id="intruder-marker" aria-label="Simulated event position">!</div>
+          <div class="map-legend">
+            <span><i class="legend-drone"></i> Drone</span>
+            <span><i class="legend-event"></i> Event</span>
+          </div>
+        </div>
+
+        <p class="map-caption" id="map-caption">No active simulated movement.</p>
+      </article>
+
+      <article class="card panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">ACTIVITY FEED</p>
+            <h2>Recent Alerts</h2>
+          </div>
+          <span class="chart-badge" id="alert-count">0 EVENTS</span>
+        </div>
+
+        <div class="alert-list" id="alert-list" aria-live="polite">
+          <p class="empty-state">No alerts yet. Start monitoring to generate demo events.</p>
+        </div>
+
+        <button type="button" class="secondary-button export-button" id="export-events">
+          ↓ Export Event Log (CSV)
+        </button>
+      </article>
+
     </section>
+
+    <footer class="page-footer">
+      <p>DBSS · Drone Border Surveillance System</p>
+      <p>Educational simulation only · No real drone or sensor connection</p>
+    </footer>
+
   </main>
 
   <script src="script.js"></script>
