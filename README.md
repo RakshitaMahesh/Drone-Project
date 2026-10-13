@@ -1,5 +1,8 @@
 # Drone-
 # Drone Border Surveillance System (DBSS)
+## Dashboard Preview
+
+![Drone Surveillance Dashboard](drone-dashboard.png)
 
 An interactive web-based prototype demonstrating a drone border surveillance dashboard with simulated monitoring, event alerts, risk assessment, and movement analytics.
 
